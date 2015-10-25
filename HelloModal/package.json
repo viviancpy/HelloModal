@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "HelloJasmine",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "systemjs": "0.19.5",
+    "es6-shim": "0.33.6" 
+  },
+  "devDependencies": {
+    
+  }
+}
