@@ -1,4 +1,4 @@
-﻿import {Component, View, NgIf} from 'angular2/angular2';
+﻿import {Component, View, NgIf, Inject} from 'angular2/angular2';
 
 @Component({
     selector: 'modal',
@@ -6,6 +6,7 @@
     <div class="modal" *ng-if="isOpen">
       <button class="right" (click)="close()">X</button>
       <ng-content></ng-content>
+        {{modalTitle}}
     </div>
     <div class="overlay" *ng-if="isOpen" (click)="close()"></div>
   `,
@@ -36,7 +37,10 @@
     directives: [NgIf]
 })
 export class Modal {
-    
+    constructor( @Inject('env.config') config) {
+        this.modalTitle = config.modalTitle;
+    }
+    modalTitle: string;
     isOpen: boolean = false;
 
     open() {

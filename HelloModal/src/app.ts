@@ -1,5 +1,10 @@
-﻿import {Component, bootstrap} from 'angular2/angular2';
+﻿import {Component, bootstrap, provide} from 'angular2/angular2';
 import {MainView} from './app/main';
+
+let config = {
+    modalTitle: 'This is a modal'
+};
+
 @Component({
     selector: 'my-app',
     template: `
@@ -9,6 +14,7 @@ import {MainView} from './app/main';
 })
 class AppComponent {
     constructor() {
+        
     }
 }
-bootstrap(AppComponent);
+bootstrap(AppComponent, [provide('env.config', { useValue: config })]);
