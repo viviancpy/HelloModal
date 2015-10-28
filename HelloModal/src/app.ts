@@ -1,20 +1,18 @@
-﻿import {Component, bootstrap, provide} from 'angular2/angular2';
+﻿import {Component, bootstrap} from 'angular2/angular2';
 import {MainView} from './app/main';
-
-let config = {
-    modalTitle: 'This is a modal'
-};
+import {ModalLayer} from './app/components/modal-layer';
 
 @Component({
     selector: 'my-app',
     template: `
-            <main-view></main-view>
+            <modal-layer></modal-layer>
+            <main-view [addr1]="'246 Jupiter Street'"></main-view>
             `,
-    directives: [MainView]
+    directives: [MainView, ModalLayer]
 })
 class AppComponent {
     constructor() {
         
     }
 }
-bootstrap(AppComponent, [provide('env.config', { useValue: config })]);
+bootstrap(AppComponent);

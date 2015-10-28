@@ -24,16 +24,31 @@
   <ItemGroup>
     <Content Include="config.js" />
     <Content Include="index.html" />
+    <Content Include="src\content\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="src\content\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="src\content\bootstrap\css\bootstrap.css" />
+    <Content Include="src\content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="src\content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="src\content\bootstrap\js\bootstrap.js" />
+    <Content Include="src\content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="src\content\bootstrap\js\npm.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\app.ts" />
+    <TypeScriptCompile Include="src\app\components\modal-layer.ts" />
     <TypeScriptCompile Include="src\app\components\modal.ts" />
     <TypeScriptCompile Include="src\app\main.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="src\env.config.js" />
+    <Content Include="src\content\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="src\content\bootstrap\css\bootstrap.css.map" />
+    <Content Include="src\content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="src\content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="src\content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="src\content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
